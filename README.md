@@ -3,13 +3,13 @@ This is a reporting tool that prints out reports (in plain text) based on the da
 
 
 ## Requirement for the Project
-* The Project makes use of Vagrant and Virtual Box for the database setup
-* Upon downloading Vagrant and Virtual Box , a setup folder can be downloaded from FSND
-* Download the setup folder and  Unzip its content 
+* The Project makes use of [Vagrant](vagrantup.com/downloads.html) and [Virtual Box](https://www.virtualbox.org/wiki/Downloads) for the database setup
+* After downloading Vagrant and Virtual Box, a setup folder can be downloaded from [HERE](https://d17h27t6h515a5.cloudfront.net/topher/2017/August/59822701_fsnd-virtual-machine/fsnd-virtual-machine.zip)
+* Download the setup folder and Unzip its content 
 * In the terminal, cd into the folder and  type `vagrant up` to set up vagrant 
 * Once the setup is done, type `vagrant ssh` to access the working environment
 * A shared folder than accessed can be accessed using  `cd /vagrant`
-* You would also need to download the Data containing newsdata.sql 
+* You would also need to download the [DATA](https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip)containing newsdata.sql 
 * Move the newsdata.sql file to the vagrant folder 
 * In your terminal, type `psql -d news -f newsdata.sql`
 
