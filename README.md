@@ -14,7 +14,9 @@ This is a reporting tool that prints out reports (in plain text) based on the da
 * In your terminal, type `psql -d news -f newsdata.sql`
 
 **psql** — the PostgreSQL command line program
+
 **-d news** — connect to the database named news which has been set up for you
+
 **-f newsdata.sql** — run the SQL statements in the file newsdata.sql
 
 * In the terminal, type `psql -d news` to access the database 
@@ -52,7 +54,7 @@ July 29, 2016 — 2.5% errors
 where articles.author = authors.id;
 
 ```
-select finally.name, count(log.path) as num "
+              "select finally.name, count(log.path) as num "
               "from finally left join log on log.path = concat( '/article/', finally.slug) "
               "group by finally.name "
               "order by num desc;
