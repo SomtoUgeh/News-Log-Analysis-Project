@@ -56,5 +56,5 @@ if __name__ == "__main__":
     print("\nOn which days did more than 1% of requests lead to errors?\n")
     error_percentage = error_date()
     for error in error_percentage:
-        print(" {} -- {} errors".format(
+        print(" {} -- {} % errors".format(
             error[1].strftime('%B %d, %Y'), "%.2f" % error[0]))
