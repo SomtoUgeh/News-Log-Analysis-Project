@@ -23,7 +23,8 @@ def popular_author():
     db = psycopg2.connect(database=DBNAME)
     c = db.cursor()
     c.execute("select finally.name, count(log.path) as num "
-              "from finally left join log on log.path = concat( '/article/', finally.slug) "
+              "from finally left join log "
+              "on log.path = concat( '/article/', finally.slug) "
               "group by finally.name "
               "order by num desc;")
     answer2 = c.fetchall()
@@ -55,4 +56,5 @@ if __name__ == "__main__":
     print("\nOn which days did more than 1% of requests lead to errors?\n")
     error_percentage = error_date()
     for error in error_percentage:
-        print(" {} -- {} errors".format(error[1].strftime('%B %d, %Y'), "%.2f" % error[0]))
+        print(" {} -- {} errors".format(
+            error[1].strftime('%B %d, %Y'), "%.2f" % error[0]))
