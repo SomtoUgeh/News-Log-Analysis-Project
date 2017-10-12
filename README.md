@@ -9,7 +9,7 @@ This is a reporting tool that prints out reports (in plain text) based on the da
 * In the terminal, cd into the folder and  type `vagrant up` to set up vagrant 
 * Once the setup is done, type `vagrant ssh` to access the working environment
 * A shared folder than accessed can be accessed using  `cd /vagrant`
-* You would also need to download the [DATA](https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip)containing newsdata.sql 
+* You would also need to download the [DATA](https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip) containing newsdata.sql 
 * Move the newsdata.sql file to the vagrant folder 
 * In your terminal, type `psql -d news -f newsdata.sql`
 
